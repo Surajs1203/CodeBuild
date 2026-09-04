@@ -1,6 +1,6 @@
-<div align="center">
+﻿<div align="center">
 
-# ShikshaNetra
+# 🎓 ShikshaNetra
 
 AI-powered pedagogical analysis platform for teaching session videos.
 
@@ -15,10 +15,10 @@ AI-powered pedagogical analysis platform for teaching session videos.
 
 ---
 
-## ?? Overview
+## 🌟 Overview
 ShikshaNetra analyzes audio, video, and text to deliver actionable insights on clarity, confidence, engagement, technical depth, and interaction quality. Direct Cloudinary uploads keep videos secure while reducing backend load.
 
-## ?? Features
+## 🚀 Features
 
 ### Core Functionality
 - **Video Analysis**: Upload teaching session videos for comprehensive AI analysis
@@ -42,7 +42,7 @@ ShikshaNetra analyzes audio, video, and text to deliver actionable insights on c
 - **Coach Feedback**: AI-generated strengths and improvement suggestions
 - **Video Playback**: On-demand video streaming via Cloudinary delivery URLs
 
-## ??? Tech Stack
+## 🛠️ Tech Stack
 
 ### Frontend
 - **Framework**: Next.js 14 (App Router)
@@ -62,7 +62,7 @@ ShikshaNetra analyzes audio, video, and text to deliver actionable insights on c
 - **File Upload**: Direct from browser to Cloudinary; backend receives the URL
 - **Security**: Ownership enforced via authenticated job creation
 
-## ?? Prerequisites
+## 📋 Prerequisites
 
 Before you begin, ensure you have the following installed:
 - **Node.js** (v18 or higher)
@@ -71,7 +71,7 @@ Before you begin, ensure you have the following installed:
 - **Cloudinary** account (unsigned upload preset ready)
 - **Python >=3.8 and <3.11** (for model service)
 
-## ?? Installation & Setup
+## 🔧 Installation & Setup
 
 ### 1. Clone the Repository
 ```bash
@@ -159,7 +159,7 @@ Payload (current app sends downloaded video as base64):
 ```
 Response includes transcript, scores, and coach_feedback JSON.
 
-## ?? Usage
+## 📱 Usage
 
 ### Getting Started
 
@@ -190,80 +190,80 @@ Response includes transcript, scores, and coach_feedback JSON.
 - **`/report/[id]`** - Detailed analysis report for a specific session
 - **`/platform`** - Platform overview
 
-## ??? Project Structure
+## 🏗️ Project Structure
 
 ```
 ShikshaNetra/
-+-- app/
-¦   +-- api/                    # API routes
-¦   ¦   +-- auth/              # Authentication endpoints
-¦   ¦   +-- analyze/           # Video analysis endpoints
-¦   ¦   +-- video/             # Video signed URL generation
-¦   ¦   +-- db/                # Database initialization
-¦   ¦   +-- storage/           # Storage initialization
-¦   +-- dashboard/             # User dashboard page
-¦   +-- demo/                  # Video upload page
-¦   +-- insights/              # Analytics page
-¦   +-- login/                 # Login page
-¦   +-- signup/                # Signup page
-¦   +-- report/[id]/          # Detailed report page
-¦   +-- layout.tsx             # Root layout
-+-- components/                 # Reusable React components
-¦   +-- Card.tsx
-¦   +-- Footer.tsx
-¦   +-- Navbar.tsx
-¦   +-- PageHeader.tsx
-¦   +-- ToastContext.tsx
-+-- lib/
-¦   +-- config/                # Configuration files
-¦   ¦   +-- database.ts       # MongoDB connection
-¦   ¦   +-- supabase.ts       # Legacy Supabase client setup (not used for video uploads)
-¦   +-- middleware/            # Express-like middleware
-¦   ¦   +-- auth.ts           # JWT authentication
-¦   +-- models/                # Database models
-¦   ¦   +-- Analysis.ts       # Analysis schema
-¦   ¦   +-- User.ts           # User schema
-¦   +-- services/              # Business logic
-¦   ¦   +-- analysisService.ts # ML response transformation
-¦   ¦   +-- authService.ts     # User authentication
-¦   ¦   +-- storageService.ts  # Legacy Supabase storage helpers
-¦   +-- types/                 # TypeScript type definitions
-¦   ¦   +-- analysis.ts       # Analysis types
-¦   +-- utils/                 # Utility functions
-¦   ¦   +-- jwt.ts            # Token generation/verification
-¦   ¦   +-- videoUpload.ts    # Video upload utilities
-¦   +-- validators/            # Input validation
-¦       +-- auth.ts  
+├── app/
+│   ├── api/                    # API routes
+│   │   ├── auth/              # Authentication endpoints
+│   │   ├── analyze/           # Video analysis endpoints
+│   │   ├── video/             # Video signed URL generation
+│   │   ├── db/                # Database initialization
+│   │   └── storage/           # Storage initialization
+│   ├── dashboard/             # User dashboard page
+│   ├── demo/                  # Video upload page
+│   ├── insights/              # Analytics page
+│   ├── login/                 # Login page
+│   ├── signup/                # Signup page
+│   ├── report/[id]/          # Detailed report page
+│   └── layout.tsx             # Root layout
+├── components/                 # Reusable React components
+│   ├── Card.tsx
+│   ├── Footer.tsx
+│   ├── Navbar.tsx
+│   ├── PageHeader.tsx
+│   └── ToastContext.tsx
+├── lib/
+│   ├── config/                # Configuration files
+│   │   ├── database.ts       # MongoDB connection
+│   │   └── supabase.ts       # Legacy Supabase client setup (not used for video uploads)
+│   ├── middleware/            # Express-like middleware
+│   │   └── auth.ts           # JWT authentication
+│   ├── models/                # Database models
+│   │   ├── Analysis.ts       # Analysis schema
+│   │   └── User.ts           # User schema
+│   ├── services/              # Business logic
+│   │   ├── analysisService.ts # ML response transformation
+│   │   ├── authService.ts     # User authentication
+│   │   └── storageService.ts  # Legacy Supabase storage helpers
+│   ├── types/                 # TypeScript type definitions
+│   │   └── analysis.ts       # Analysis types
+│   ├── utils/                 # Utility functions
+│   │   ├── jwt.ts            # Token generation/verification
+│   │   └── videoUpload.ts    # Video upload utilities
+│   └── validators/            # Input validation
+│       └── auth.ts  
 model/
-+-- config/
-¦   +-- __pycache__/                          
-¦   +-- settings.py                          
-+-- src/
-¦   +-- genai/
-¦   ¦   +-- __init__.py
-¦   ¦   +-- .env.sample
-¦   ¦   +-- __pycache__/                          
-¦   ¦   +-- coach.py                    # High-level orchestrator
-¦   ¦
-¦   +-- processors/
-¦   ¦   +-- __init__.py
-¦   ¦   +-- audio_analyzer.py           # Audio ML logic
-¦   ¦   +-- text_analyzer.py            # Text ML logic
-¦   ¦   +-- video_analyzer.py           # Video ML logic
-¦   ¦   +-- pipeline.py                 # Pipeline combining processors
-¦   ¦
-¦   +-- app.py                          # FastAPI/Flask app (should host inference API)
-¦   +-- main.py                         # Entry point (runs the server)
-¦   +-- packages.txt
-¦   +-- requirements.txt
-¦   +-- README.md         # Auth validation schemas
-+-- public/                    # Static assets
-+-- .env.local                 # Environment variables (not in repo)
-+-- .env.example              # Example environment variables
-+-- README.md                 # This file
+├── config/
+│   └── __pycache__/                          
+│   └── settings.py                          
+├── src/
+│   ├── genai/
+│   │   ├── __init__.py
+│   │   ├── .env.sample
+│   │   ├── __pycache__/                          
+│   │   └── coach.py                    # High-level orchestrator
+│   │
+│   ├── processors/
+│   │   ├── __init__.py
+│   │   ├── audio_analyzer.py           # Audio ML logic
+│   │   ├── text_analyzer.py            # Text ML logic
+│   │   ├── video_analyzer.py           # Video ML logic
+│   │   └── pipeline.py                 # Pipeline combining processors
+│   │
+│   ├── app.py                          # FastAPI/Flask app (should host inference API)
+│   ├── main.py                         # Entry point (runs the server)
+│   ├── packages.txt
+│   ├── requirements.txt
+│   └── README.md         # Auth validation schemas
+├── public/                    # Static assets
+├── .env.local                 # Environment variables (not in repo)
+├── .env.example              # Example environment variables
+└── README.md                 # This file
 ```
 
-## ?? Security Features
+## 🔒 Security Features
 
 - **JWT Authentication**: Secure token-based authentication with refresh tokens
 - **HTTP-Only Cookies**: Refresh tokens stored securely
@@ -272,7 +272,7 @@ model/
 - **User Validation**: Video access restricted to owners only
 - **Service Role Key**: Admin operations use separate credentials
 
-## ?? API Endpoints
+## 🎯 API Endpoints
 
 ### Authentication
 - `POST /api/auth/signup` - Register new user
@@ -294,7 +294,7 @@ model/
 - `POST /api/db/init` - Initialize database (requires admin secret)
 - `POST /api/storage/init` - Deprecated (Supabase storage removed)
 
-## ?? Database Schema
+## 📊 Database Schema
 
 ### Users Collection
 ```typescript
@@ -341,15 +341,15 @@ model/
 }
 ```
 
-## ?? Contributing
+## 🤝 Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
 
-## ?? License
+## 📄 License
 
 This project is licensed under the MIT License.
 
-## ?? Team
+## 👥 Team
 
 ShikshaNetra - AI-Powered Teaching Analytics Platform
 
@@ -361,11 +361,11 @@ Mudit Chorausiya(Research Lead)
 
 Asmit Yadav(AI & Model Development)
 
-## ?? Support
+## 📞 Support
 
 For support, please contact the development team or open an issue on GitHub.
 
 ---
 
 **Note**: This is an active development project. Features and documentation are continuously updated.
-#
+
