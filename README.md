@@ -1,6 +1,6 @@
 <div align="center">
 
-# ?? ShikshaNetra
+# ShikshaNetra
 
 AI-powered pedagogical analysis platform for teaching session videos.
 
@@ -195,68 +195,68 @@ Response includes transcript, scores, and coach_feedback JSON.
 ```
 ShikshaNetra/
 +-- app/
-¦   +-- api/                    # API routes
-¦   ¦   +-- auth/              # Authentication endpoints
-¦   ¦   +-- analyze/           # Video analysis endpoints
-¦   ¦   +-- video/             # Video signed URL generation
-¦   ¦   +-- db/                # Database initialization
-¦   ¦   +-- storage/           # Storage initialization
-¦   +-- dashboard/             # User dashboard page
-¦   +-- demo/                  # Video upload page
-¦   +-- insights/              # Analytics page
-¦   +-- login/                 # Login page
-¦   +-- signup/                # Signup page
-¦   +-- report/[id]/          # Detailed report page
-¦   +-- layout.tsx             # Root layout
+Â¦   +-- api/                    # API routes
+Â¦   Â¦   +-- auth/              # Authentication endpoints
+Â¦   Â¦   +-- analyze/           # Video analysis endpoints
+Â¦   Â¦   +-- video/             # Video signed URL generation
+Â¦   Â¦   +-- db/                # Database initialization
+Â¦   Â¦   +-- storage/           # Storage initialization
+Â¦   +-- dashboard/             # User dashboard page
+Â¦   +-- demo/                  # Video upload page
+Â¦   +-- insights/              # Analytics page
+Â¦   +-- login/                 # Login page
+Â¦   +-- signup/                # Signup page
+Â¦   +-- report/[id]/          # Detailed report page
+Â¦   +-- layout.tsx             # Root layout
 +-- components/                 # Reusable React components
-¦   +-- Card.tsx
-¦   +-- Footer.tsx
-¦   +-- Navbar.tsx
-¦   +-- PageHeader.tsx
-¦   +-- ToastContext.tsx
+Â¦   +-- Card.tsx
+Â¦   +-- Footer.tsx
+Â¦   +-- Navbar.tsx
+Â¦   +-- PageHeader.tsx
+Â¦   +-- ToastContext.tsx
 +-- lib/
-¦   +-- config/                # Configuration files
-¦   ¦   +-- database.ts       # MongoDB connection
-¦   ¦   +-- supabase.ts       # Legacy Supabase client setup (not used for video uploads)
-¦   +-- middleware/            # Express-like middleware
-¦   ¦   +-- auth.ts           # JWT authentication
-¦   +-- models/                # Database models
-¦   ¦   +-- Analysis.ts       # Analysis schema
-¦   ¦   +-- User.ts           # User schema
-¦   +-- services/              # Business logic
-¦   ¦   +-- analysisService.ts # ML response transformation
-¦   ¦   +-- authService.ts     # User authentication
-¦   ¦   +-- storageService.ts  # Legacy Supabase storage helpers
-¦   +-- types/                 # TypeScript type definitions
-¦   ¦   +-- analysis.ts       # Analysis types
-¦   +-- utils/                 # Utility functions
-¦   ¦   +-- jwt.ts            # Token generation/verification
-¦   ¦   +-- videoUpload.ts    # Video upload utilities
-¦   +-- validators/            # Input validation
-¦       +-- auth.ts  
+Â¦   +-- config/                # Configuration files
+Â¦   Â¦   +-- database.ts       # MongoDB connection
+Â¦   Â¦   +-- supabase.ts       # Legacy Supabase client setup (not used for video uploads)
+Â¦   +-- middleware/            # Express-like middleware
+Â¦   Â¦   +-- auth.ts           # JWT authentication
+Â¦   +-- models/                # Database models
+Â¦   Â¦   +-- Analysis.ts       # Analysis schema
+Â¦   Â¦   +-- User.ts           # User schema
+Â¦   +-- services/              # Business logic
+Â¦   Â¦   +-- analysisService.ts # ML response transformation
+Â¦   Â¦   +-- authService.ts     # User authentication
+Â¦   Â¦   +-- storageService.ts  # Legacy Supabase storage helpers
+Â¦   +-- types/                 # TypeScript type definitions
+Â¦   Â¦   +-- analysis.ts       # Analysis types
+Â¦   +-- utils/                 # Utility functions
+Â¦   Â¦   +-- jwt.ts            # Token generation/verification
+Â¦   Â¦   +-- videoUpload.ts    # Video upload utilities
+Â¦   +-- validators/            # Input validation
+Â¦       +-- auth.ts  
 model/
 +-- config/
-¦   +-- __pycache__/                          
-¦   +-- settings.py                          
+Â¦   +-- __pycache__/                          
+Â¦   +-- settings.py                          
 +-- src/
-¦   +-- genai/
-¦   ¦   +-- __init__.py
-¦   ¦   +-- .env.sample
-¦   ¦   +-- __pycache__/                          
-¦   ¦   +-- coach.py                    # High-level orchestrator
-¦   ¦
-¦   +-- processors/
-¦   ¦   +-- __init__.py
-¦   ¦   +-- audio_analyzer.py           # Audio ML logic
-¦   ¦   +-- text_analyzer.py            # Text ML logic
-¦   ¦   +-- video_analyzer.py           # Video ML logic
-¦   ¦   +-- pipeline.py                 # Pipeline combining processors
-¦   ¦
-¦   +-- app.py                          # FastAPI/Flask app (should host inference API)
-¦   +-- main.py                         # Entry point (runs the server)
-¦   +-- packages.txt
-¦   +-- requirements.txt
-¦   +-- README.md         # Auth validation schemas
+Â¦   +-- genai/
+Â¦   Â¦   +-- __init__.py
+Â¦   Â¦   +-- .env.sample
+Â¦   Â¦   +-- __pycache__/                          
+Â¦   Â¦   +-- coach.py                    # High-level orchestrator
+Â¦   Â¦
+Â¦   +-- processors/
+Â¦   Â¦   +-- __init__.py
+Â¦   Â¦   +-- audio_analyzer.py           # Audio ML logic
+Â¦   Â¦   +-- text_analyzer.py            # Text ML logic
+Â¦   Â¦   +-- video_analyzer.py           # Video ML logic
+Â¦   Â¦   +-- pipeline.py                 # Pipeline combining processors
+Â¦   Â¦
+Â¦   +-- app.py                          # FastAPI/Flask app (should host inference API)
+Â¦   +-- main.py                         # Entry point (runs the server)
+Â¦   +-- packages.txt
+Â¦   +-- requirements.txt
+Â¦   +-- README.md         # Auth validation schemas
 +-- public/                    # Static assets
 +-- .env.local                 # Environment variables (not in repo)
 +-- .env.example              # Example environment variables
