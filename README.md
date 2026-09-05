@@ -349,19 +349,6 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 This project is licensed under the MIT License.
 
-## 👥 Team
-
-ShikshaNetra - AI-Powered Teaching Analytics Platform
-
-Om Jha(Backend, AI Developer & Integration)
-
-Vikas Saini(Frontend & UI/UX Developer)
-
-Mudit Chorausiya(Research Lead)
-
-Asmit Yadav(AI & Model Development)
-
-## 📞 Support
 
 For support, please contact the development team or open an issue on GitHub.
 
